@@ -12,7 +12,7 @@
         <li class="table__row" v-for="bid in a.bids">
           <span class="table__column">{{ bid[1] }}</span>
           <span class="table__column">{{ bid[0] }}</span>
-          <span class="table__column">{{ bid[0] * bid[1] }}</span>
+          <span class="table__column">{{ (bid[0] * bid[1]).toFixed(8) }}</span>
         </li>
       </ul>
       <ul class="table__order">
@@ -25,7 +25,7 @@
         <li class="table__row" v-for="ask in a.asks">
           <span class="table__column">{{ ask[1] }}</span>
           <span class="table__column">{{ ask[0] }}</span>
-          <span class="table__column">{{ ask[0] * ask[1] }}</span>
+          <span class="table__column">{{ (ask[0] * ask[1]).toFixed(8) }}</span>
         </li>
       </ul>
     </div>
