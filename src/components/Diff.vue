@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="diff">
     <symbols-drop-down :core="core" :on-change="onChangeCurrentSymbol" />
     <ul v-for="diff of diffs[currentSymbol]" v-if="diffs">
       <li>{{diff.date.toDateString()}} {{diff.date.toTimeString()}}</li>
@@ -55,5 +55,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .diff {
+    padding: 0 10px;
+  }
 </style>

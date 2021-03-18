@@ -60,7 +60,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .table {
   overflow: hidden;
 
@@ -115,5 +115,28 @@ export default {
 
 .table__title {
   font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .table {
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+
+  .table__row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table__column:nth-child(3) {
+    display: none;
+  }
+
+  .table__column {
+    width: 100px;
+  }
+
+  .table__column:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 </style>
